@@ -1,11 +1,14 @@
-document.getElementById('loginForm'). addEventListener('submit', function(e) {
-    e.preventDefault();
-    const user = document.getElementById('username').value;
-    const pass = document.getElementById('password').value;
+const form = document.getElementById("loginForm");
 
-    if (user === "User" && pass === "1234") {
-        alert("Login berhasil. Selamat datang, " + user + "!");
+form.addEventListener("submit", function(e) {
+    const username = document.getElementById("username").value;
+    const password = document.getElementById("password").value;
+
+    if (username === "User" && password === "1234") {
+        alert("Login berhasil!");
+       
     } else {
-        alert("Nama pengguna atau kata sandi salah.")
+        e.preventDefault(); 
+        alert("Nama pengguna atau kata sandi salah");
     }
-})
+});
